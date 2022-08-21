@@ -1,0 +1,41 @@
+@use "../abstracts" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Yellowtail&display=swap");
+
+:root {
+    --ff-body: "Poppins", sans-serif;
+    --ff-second: "Yellowtail", cursive;
+
+    @each $color, $shade in $colors {
+        @each $prop, $value in $shade {
+            --clr-#{$color}-#{$prop}: #{$value};
+        }
+    }
+    --clr-white: hsl(0, 100%, 100%);
+    --clr-black: hsl(0, 0%, 0%);
+    --bg-body: var(--clr-neutral-500);
+    --clr-body: var(--clr-neutral-100);
+
+    @each $screen-size, $property in $type-scale {
+        @if $screen-size ==small {
+            @each $prop, $value in $property {
+                --fs-#{$prop}: #{$value};
+            }
+        } @else {
+            @include mq(small) {
+                @each $prop, $value in $property {
+                    --fs-#{$prop}: #{$value};
+                }
+            }
+        }
+    }
+    --fs-body: var(--fs-300);
+
+    --fw-body: 400;
+
+    --hero-height: 35rem;
+
+    @include mq(small) {
+        --hero-height: 40rem;
+    }
+}

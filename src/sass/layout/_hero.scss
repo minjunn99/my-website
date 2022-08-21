@@ -1,0 +1,36 @@
+.hero {
+    height: var(--hero-height);
+    background: url("../../img/bg.jfif") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &--container {
+        height: 100%;
+        background: linear-gradient(180deg, rgba(30, 35, 51, 0) 60%, #1e2333);
+
+        > * {
+            --gap: 0.5rem;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+
+    &--image {
+        width: 13rem;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+
+    &--name {
+        font-family: var(--ff-second);
+    }
+
+    &--desc {
+        letter-spacing: 1px;
+    }
+
+    &--social {
+        --gap: 1rem;
+    }
+}

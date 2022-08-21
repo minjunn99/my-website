@@ -1,0 +1,24 @@
+.d-flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.justify-content {
+    &-center {
+        justify-content: center;
+    }
+
+    &-between {
+        justify-content: space-between;
+    }
+
+    &-around {
+        justify-content: space-around;
+    }
+}
+
+.align-items {
+    &-center {
+        align-items: center;
+    }
+}

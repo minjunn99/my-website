@@ -1,0 +1,37 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-body);
+    line-height: 1.6;
+
+    background-color: var(--bg-body);
+    color: var(--clr-body);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img,
+picture,
+video,
+iframe,
+canvas {
+    display: block;
+    width: 100%;
+}
+
+::selection {
+    background-color: var(--clr-primary-500);
+    color: var(--clr-white);
+}
