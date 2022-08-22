@@ -2,7 +2,7 @@
 
 @each $color, $shade in $colors {
     @each $prop, $value in $shade {
-        .clr-#{$color}-#{$prop} {
+        .text-#{$color}-#{$prop} {
             color: #{$value} !important;
         }
 

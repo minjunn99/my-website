@@ -1,0 +1,86 @@
+@use "../abstracts" as *;
+
+.about {
+    &--content {
+        --gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+
+        @include mq(small) {
+            flex-direction: row;
+            align-items: start;
+        }
+
+        @include mq(medium) {
+            --gap: 4rem;
+        }
+    }
+
+    &--avatar {
+        width: 15rem;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        @include mq(medium) {
+            width: 20rem;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &--detail {
+        --flow-spacer: 2rem;
+    }
+
+    &--info {
+        --gap: 0.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    }
+
+    &--btns {
+        --gap: 1rem;
+    }
+
+    &--timeline {
+        --gap: 2rem;
+        flex-direction: column;
+        padding-block: var(--section-spacing);
+
+        > * {
+            flex: 1;
+        }
+
+        @include mq(small) {
+            flex-direction: row;
+        }
+
+        @include mq(medium) {
+            > * {
+                padding-inline: 1.5rem;
+            }
+        }
+    }
+
+    &--skills {
+        --gap: 2rem;
+        padding-block: var(--section-spacing);
+
+        @include mq(small) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &--skill {
+        &__item::before {
+            content: "\2714";
+            margin-right: 0.5rem;
+            font-size: var(--fs-body);
+            color: var(--clr-primary-300);
+            line-height: 1;
+        }
+    }
+}

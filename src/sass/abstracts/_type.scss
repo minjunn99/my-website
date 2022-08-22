@@ -1,7 +1,8 @@
 $type-scale: (
     small: (
         // Minor third
-        200: 0.625rem,
+        100: 0.625rem,
+        200: 0.875rem,
         300: 1rem,
         400: 1.125rem,
         500: 1.563rem,
@@ -11,7 +12,8 @@ $type-scale: (
     ),
     big: (
         // Augmented fourth
-        200: 0.625rem,
+        100: 0.625rem,
+        200: 0.875rem,
         300: 1rem,
         400: 1.25rem,
         500: 2rem,

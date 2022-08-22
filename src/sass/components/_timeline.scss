@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+.timeline {
+    &--item {
+        --timeline-padding: 1rem;
+        border-left: 1px solid transparent;
+        padding-inline: var(--timeline-padding);
+
+        @include mq(medium) {
+            --timeline-padding: 1.875rem;
+        }
+
+        &:not(:last-child) {
+            border-color: var(--clr-primary-300);
+            padding-bottom: 3.75rem;
+        }
+    }
+
+    &--date {
+        position: relative;
+        top: -1rem;
+        display: inline-block;
+        padding: 0.125rem 0.25rem;
+        border: 1px solid var(--clr-primary-300);
+        color: var(--clr-primary-300);
+        font-size: var(--fs-100);
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: calc(-1 * (var(--timeline-padding) + 2px));
+            top: 50%;
+            transform: translateY(-50%);
+            width: calc(var(--timeline-padding) + 1px);
+            height: 1px;
+            background-color: var(--clr-primary-300);
+        }
+    }
+
+    &--detail {
+        font-size: var(--fs-300);
+        text-transform: capitalize;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    &--desc {
+        font-size: var(--fs-200);
+    }
+}

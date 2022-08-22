@@ -1,0 +1,40 @@
+.btn {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    background-color: var(--background);
+    color: var(--color);
+    border: thin solid var(--border);
+    cursor: pointer;
+    transition: all 150ms ease;
+
+    &[button-type="primary"] {
+        --clr-primary: var(--clr-primary-400);
+        --clr-second: var(--clr-white);
+        &:hover {
+            --clr-primary: var(--clr-primary-300);
+        }
+    }
+
+    &[button-variant="contained"] {
+        --background: var(--clr-primary, var(--clr-neutral-300));
+        --color: var(--clr-second, var(--clr-body));
+        --border: var(--background);
+
+        &:hover {
+            --background: var(--clr-primary, var(--clr-neutral-400));
+        }
+    }
+
+    &[button-variant="outlined"] {
+        --background: transparent;
+        --color: var(--clr-primary, var(--clr-body));
+        --border: var(--color);
+
+        &:hover {
+            --background: var(--clr-primary, var(--clr-body));
+            --color: var(--clr-second, var(--clr-white));
+            --border: var(--background);
+        }
+    }
+}

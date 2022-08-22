@@ -31,6 +31,12 @@ canvas {
     width: 100%;
 }
 
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
 ::selection {
     background-color: var(--clr-primary-500);
     color: var(--clr-white);
