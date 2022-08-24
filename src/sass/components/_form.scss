@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.form {
+    &--input {
+        display: block;
+        width: 100%;
+        margin-top: 0.25rem;
+        outline: none;
+        resize: none;
+        border: none;
+        background-color: transparent;
+        color: inherit;
+        border: 1px solid var(--clr-neutral-300);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        transition: border-color 350ms ease;
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            border-color: var(--clr-primary-300);
+        }
+    }
+
+    &--label {
+        text-transform: capitalize;
+    }
+
+    textarea {
+        height: 12rem;
+    }
+}
