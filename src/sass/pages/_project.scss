@@ -1,6 +1,6 @@
 .projects {
     &--list {
-        --gap: 1.25rem;
+        --gap: 1.25rem 1.5rem;
         grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
     }
 }
